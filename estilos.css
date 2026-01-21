@@ -99,15 +99,50 @@ section {
 }
 
 /* 📱 MÓVIL */
+/* 📱 MODO CATÁLOGO PRO – MÓVIL */
 @media (max-width: 768px) {
-  .productos {
-    grid-template-columns: 1fr;
+
+  /* Que ocupe todo el ancho real */
+  body {
+    padding: 0;
   }
 
+  section {
+    padding: 20px 10px;
+  }
+
+  .productos {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Tarjeta ocupa toda la pantalla */
+  .producto {
+    width: 100%;
+    border-radius: 14px;
+    padding: 20px;
+  }
+
+  /* Imagen más grande */
   .producto img {
-    height: 240px;
+    height: 280px;
+  }
+
+  /* Nombre del producto MÁS GRANDE */
+  .producto p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  /* Botón más grande y cómodo */
+  .producto button {
+    font-size: 1.05rem;
+    padding: 14px;
   }
 }
+
 
 /* 📱 TABLET */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -115,3 +150,4 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
