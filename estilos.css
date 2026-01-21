@@ -100,7 +100,7 @@ section {
 
 /* 📱 MÓVIL */
 /* 📱 MODO CATÁLOGO PRO – MÓVIL */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   /* Que ocupe todo el ancho real */
   body {
@@ -144,10 +144,5 @@ section {
 }
 
 
-/* 📱 TABLET */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .productos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 
