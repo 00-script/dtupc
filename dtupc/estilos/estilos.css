@@ -1,0 +1,148 @@
+:root {
+  --amarillo: #FFFF00;
+  --negro: #000;
+  --blanco: #fff;
+}
+@media (max-width: 768px) {
+  .producto img {
+    height: 220px;
+  }
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+/* Header */
+header {
+  background-color: var(--amarillo);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header a {
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Secciones */
+section {
+  padding: 40px 20px;
+}
+
+/* Grid de productos */
+.productos {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  
+}
+
+/* Tarjeta de producto */
+.producto {
+  border: 2px solid var(--amarillo);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  float: left;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Imagen del producto */
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Texto del producto */
+.producto p {
+  font-weight: bold;
+}
+
+/* Cards clicables del index */
+.card {
+  color: black;
+  text-decoration: none;
+}
+
+.card:visited,
+.card:hover,
+.card:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* 📱 MÓVIL */
+/* 📱 MODO CATÁLOGO PRO – MÓVIL */
+@media (max-width: 1024px) {
+
+  /* Que ocupe todo el ancho real */
+  body {
+    padding: 0;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  .productos {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Tarjeta ocupa toda la pantalla */
+  .producto {
+    width: 100%;
+    border-radius: 14px;
+    padding: 20px;
+  }
+
+  /* Imagen más grande */
+  .producto img {
+    height: 280px;
+  }
+
+  /* Nombre del producto MÁS GRANDE */
+  .producto p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  /* Botón más grande y cómodo */
+  .producto button {
+    font-size: 1.05rem;
+    padding: 14px;
+  }
+}
+
+
+
+
